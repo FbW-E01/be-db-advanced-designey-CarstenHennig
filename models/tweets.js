@@ -2,10 +2,10 @@ import mongoose from "mongoose";
 
 const tweetSchema = new mongoose.Schema({
   text: String,
-  img1: File,
-  img2: File,
-  img3: File,
-  img4: File,
+  img1: Buffer,
+  img2: Buffer,
+  img3: Buffer,
+  img4: Buffer,
   hashtag: String,
   tags: String,
   likes: Number,
@@ -13,5 +13,5 @@ const tweetSchema = new mongoose.Schema({
 });
 
 const tweetCollection = "tweets";
-const Tweet = mongoose.model(tweetCollection, tweetSchema);
+const Tweets = mongoose.model(tweetCollection, tweetSchema);
 export default Tweets;
